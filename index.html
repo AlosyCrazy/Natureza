@@ -3,11 +3,12 @@
         <title>
             AlbumNatureza
         </title>
+        <link rel="stylesheet" href="style.css"> 
     </head>
     <body>
         <h1>Album natureza</h1>
         <img src="http://astroclick.com.br/wp-content/uploads/2019/01/cenote-sagrado.jpg" id="NatureImages">
-        <h2 id="NatureNames"></h2>
+        <h2 id="NatureNames">o Cenote Sagrado</h2>
         <button onclick="update()">próxima foto</button>
         <script>
             var names=["O Cenote Sagrado", "A Torre do Diabo", "A Lagoa Encantada dos Negros", "As Cataratas Vitória"];
@@ -16,15 +17,15 @@
             function update()
             {
                 i++;
-                var numberOfPlacesInArray = 4
+                var numberOfPlacesInArray = 3
                 if(i > numberOfPlacesInArray )
                 {
                     i = 0;
                 }
-                var updatedImage images[i];
-                var updatedNames names[i];
+                var updatedImage = images[i];
+                var updatedNames = names[i];
                 document.getElementById("NatureImages").src = updatedImage;
-                document.getElementById("NatureNames").innerHTML = updatedName;
+                document.getElementById("NatureNames").innerHTML = updatedNames;
             }
         </script>
     </body>
