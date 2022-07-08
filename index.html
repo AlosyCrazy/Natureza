@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            AlbumNatureza
+        </title>
+    </head>
+    <body>
+        <h1>Album natureza</h1>
+        <img src="http://astroclick.com.br/wp-content/uploads/2019/01/cenote-sagrado.jpg" id="NatureImages">
+        <h2 id="NatureNames"></h2>
+        <button onclick="update()">próxima foto</button>
+        <script>
+            var names=["O Cenote Sagrado", "A Torre do Diabo", "A Lagoa Encantada dos Negros", "As Cataratas Vitória"];
+            var images=["http://astroclick.com.br/wp-content/uploads/2019/01/cenote-sagrado.jpg", "http://astroclick.com.br/wp-content/uploads/2019/01/torrediabo1-768x576.jpg", "http://astroclick.com.br/wp-content/uploads/2019/01/Lagoa-Encantada-2-Acervo-Palmares.jpg", "http://astroclick.com.br/wp-content/uploads/2019/01/cataratas-vitoria-zambia-768x576.jpg"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numberOfPlacesInArray = 4
+                if(i > numberOfPlacesInArray )
+                {
+                    i = 0;
+                }
+                var updatedImage images[i];
+                var updatedNames names[i];
+                document.getElementById("NatureImages").src = updatedImage;
+                document.getElementById("NatureNames").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
